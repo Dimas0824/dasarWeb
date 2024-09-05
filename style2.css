@@ -8,13 +8,33 @@ body{
     background-color: #ddd;
     line-height: 1.65;
     padding-bottom: 1000px;
+    
 }
 /*Latihan 1*/
 .container-satu{
-    width: 800px;
+    width: 1000px;
     margin: 50px;
     background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+}
+
+.sidebar-satu {
+    width: 20%; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar-dua{
+    width: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.kolom-utama{
+    width: 75%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
 }
