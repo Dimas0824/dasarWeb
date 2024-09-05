@@ -9,11 +9,3 @@ body{
     line-height: 1.65;
     padding-bottom: 1000px;
 }
-/*Latihan 1*/
-.container-satu{
-    width: 800px;
-    margin: 50px;
-    background-color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-}
