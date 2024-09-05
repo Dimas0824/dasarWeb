@@ -3,3 +3,18 @@ h2{
     font-family: Trebuchet MS;
     text-align: center;
 }
+
+.kotak{
+    padding: 50px;
+    width: 100px;
+    color: #fff;
+    margin: 10px;
+    background: orange;
+}
+
+#kotak{
+    width: 400px;
+    color: #fff;
+    background: blue;
+    padding: 50px;
+}
