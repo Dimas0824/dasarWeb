@@ -19,7 +19,7 @@ h2{
     padding: 50px;
 }
 body{
-    background: url(img/field1.jpg), url(img/tree1.png);
+    background: url(img/field1.jpg), url(img/tree1.jpg);
     background-repeat: no-repeat, repeat;
     color: white;
 }
