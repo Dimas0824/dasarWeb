@@ -1,0 +1,17 @@
+.tulisan-satu {
+    color: red;
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.tulisan-dua {
+    color: green;
+    font-size: 24pt;
+    font-style: italic;
+}
+
+.tulisan-tiga {
+    color: blue;
+    font-weight: bold;
+    font-style: oblique;
+}
