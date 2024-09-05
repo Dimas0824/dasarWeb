@@ -9,3 +9,7 @@
 .link:link{
     color: blue;
 }
+
+.link::visited{
+    color: greenyellow;
+}
