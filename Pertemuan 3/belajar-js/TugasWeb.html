@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Tugas tambahan</title>
+    <style>
+        header {
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to right, rgba(0, 0, 255, 0.8), rgba(0, 128, 255, 0.8), rgba(0, 255, 255, 0.8));
+            border-bottom: 2px solid #626262;
+            margin-bottom: 20px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .input-lahir {
+            margin-top: 15px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-left: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            margin-left: 100px;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            margin-left: 107px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border-width: 1px;
+            background-color: rgb(236, 236, 236);
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama">
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <textarea name="alamat" id="alamat"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="tanggal-lahir">Tanggal Lahir</label>
+            <input type="date" id="tanggal-lahir" name="tanggal-lahir">
+        </div>
+        <div class="form-group">
+            <label for="jenisKelamin">Jenis Kelamin</label>
+            <input type="radio" name="jenisKelamin" value="Laki-Laki" id="laki-laki">
+            <label for="Laki-Laki">Laki-Laki</label>
+            <input type="radio" name="jenisKelamin" value="Wanita" id="wanita">
+            <label for="Wanita">Wanita</label>
+        </div>
+        <div class="form-group">
+            <div class="input-lahir">
+                <label for="Hobby"> Hobby</label>
+                <input type="checkbox" name="Hobby" value="Berenang" id="berenang">
+                <label for="Berenang">Berenang</label>
+                <input type="checkbox" name="Hobby" value="Berlari" id="berlari">
+                <label for="Berlari">Berlari</label>
+                <input type="checkbox" name="Hobby" value="Lain-Lain" id="lain-lain">
+                <label for="Lain-Lain">Lain-Lain</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pekerjaan">Pekerjaan</label>
+            <input type="radio" name="pekerjaan" value="Swasta" id="swasta">
+            <label for="Swasta">Swasta</label>
+            <input type="radio" name="pekerjaan" value="PNS" id="pns">
+            <label for="PNS">PNS</label>
+            <input type="radio" name="pekerjaan" value="Lain-Lain" id="pekerjaan-lain">
+            <label for="Lain-Lain">Lain-Lain</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="kirim" value="kirim" id="kirim">
+            <label for="kirim">Check jika anda akan mengirimkan data ini</label>
+        </div>
+        <button type="submit">Cek!</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var nama = document.getElementById('nama').value.trim();
+            var alamat = document.getElementById('alamat').value.trim();
+            var tanggalLahir = document.getElementById('tanggal-lahir').value;
+            var jenisKelamin = document.querySelector('input[name="jenisKelamin"]:checked');
+            var pekerjaan = document.querySelector('input[name="pekerjaan"]:checked');
+            var kirim = document.getElementById('kirim').checked;
+
+            if (!nama) {
+                alert("Nama belum diisi");
+                return false;
+            }
+
+            if (!alamat) {
+                alert("Alamat belum diisi");
+                return false;
+            }
+
+            if (!tanggalLahir) {
+                alert("Tanggal lahir belum diisi");
+                return false;
+            }
+
+            if (!jenisKelamin) {
+                alert("Jenis kelamin belum dipilih");
+                return false;
+            }
+
+            if (!pekerjaan) {
+                alert("Pekerjaan belum dipilih");
+                return false;
+            }
+
+            if (!kirim) {
+                alert("Anda harus mencentang checkbox untuk mengirim data");
+                return false;
+            }
+            alert("Data telah dikirim");
+            return true;
+        }
+    </script>
+</body>
+
+</html>
