@@ -35,6 +35,7 @@ echo "Nama Belakang: {$namaBelakang}<br>";
 
 echo $namaLengkap;
 
+//no 14
 $listMahasiswa = ["Wahid Abdullah", "Elmo Bachtiar", "Lendis Fabri"];
 echo $listMahasiswa[0];
 
