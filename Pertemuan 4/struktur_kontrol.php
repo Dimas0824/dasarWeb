@@ -11,4 +11,18 @@ if($nilaiNumerik >= 90 && $nilaiNumerik <= 100){
     echo "Nilai huruf: D";
 }
 
+//no 5-6
+$jarakSaatIni = 0;
+$jarakTarget = 500;
+$peningkatanHarian = 30;
+$hari = 0;
+
+while($jarakSaatIni < $jarakTarget){
+    $jarakSaatIni += $peningkatanHarian;
+    $hari++;
+}
+echo "Atlet tersebut memerlukan $hari hari untuk mencapai jarak 500 kilometer";
+
 ?>
+
+p
