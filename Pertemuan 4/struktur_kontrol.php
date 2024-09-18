@@ -35,4 +35,15 @@ for($i = 1; $i <= $jumlahLahan; $i++){
 
 echo "<br><br>Jumlah buah yang akan dipanen adalah: $jumlahBuah";
 
+//no 14
+$skorUjian = [85,92,78,96,88];
+$totalSkor = 0;
+
+foreach($skorUjian as $skor){
+    $totalSkor += $skor;
+}
+
+echo "<br><br>Total skor yang diperoleh: $totalSkor";
+
+
 ?>
