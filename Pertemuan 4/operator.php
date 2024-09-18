@@ -43,4 +43,17 @@ echo "Hasil Or: $hasilOr <br>";
 echo "Hasil Not A: $hasilNotA <br>";
 echo "Hasil Not B: $hasilNotB <br>";
 
+//no 11
+$a += $b;
+$a -= $b;
+$a *= $b;
+$a /= $b;
+$a %= $b;
+
+//melengkapi no 12
+echo "Hasil A += B: $a <br>";
+echo "Hasil A -= B: $a <br>";
+echo "Hasil A *= B: $a <br>";
+echo "Hasil A /= B: $a <br>";
+echo "Hasil A %= B: $a <br>";
 ?>
