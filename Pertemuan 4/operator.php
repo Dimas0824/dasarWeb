@@ -56,4 +56,10 @@ echo "Hasil A -= B: $a <br>";
 echo "Hasil A *= B: $a <br>";
 echo "Hasil A /= B: $a <br>";
 echo "Hasil A %= B: $a <br>";
+
+//no 14
+$hasilIdentik = $a === $b;
+$hasilTidakIdentik = $a !== $b;
+
+//melengkapi no 15
 ?>
