@@ -16,3 +16,12 @@ echo "hasil bagi: $hasilBagi <br>";
 echo "sisa bagi: $sisaBagi <br>";
 echo "pangkat: $pangkat <br>";
 
+//no 5
+$hasilSama = $a == $b;
+$hasilTidakSama = $a != $b;
+$hasilLebihKecil = $a < $b;
+$hasilLebihBesar = $a > $b;
+$hasilLebihKecilSama = $a <= $b;
+$hasilLebihBesarSama = $a >= $b;
+
+//melengkapi no 6
