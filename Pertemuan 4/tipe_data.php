@@ -23,4 +23,13 @@ echo "Matematika: {$nilaiMatematika}<br>";
 echo "IPA: {$nilaiIPA}<br>";
 echo "Bahasa Indonesia: {$nilaiBahasaIndonesia}<br>";
 
+//no 10-11
+$namaDepan = "Ibnu";
+$namaBelakang = "Jakaria";
+
+$namaLengkap = "{$namaDepan} {$namaBelakang}";
+$namaLengkap2 = $namaDepan . '' . $namaBelakang;
+
 ?>
+
+-
