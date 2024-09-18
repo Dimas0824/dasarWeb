@@ -62,4 +62,6 @@ $hasilIdentik = $a === $b;
 $hasilTidakIdentik = $a !== $b;
 
 //melengkapi no 15
+echo "Hasil Identik: $hasilIdentik <br>";
+echo "Hasil Tidak Identik: $hasilTidakIdentik <br>";
 ?>
