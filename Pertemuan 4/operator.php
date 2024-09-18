@@ -24,4 +24,12 @@ $hasilLebihBesar = $a > $b;
 $hasilLebihKecilSama = $a <= $b;
 $hasilLebihBesarSama = $a >= $b;
 
-//melengkapi no 6
+// melengkapi no 6
+echo "Hasil Sama: $hasilSama <br>";
+echo "Hasil Tidak Sama: $hasilTidakSama <br>";
+echo "Hasil Lebih Kecil: $hasilLebihKecil <br>";
+echo "Hasil Lebih Besar: $hasilLebihBesar <br>";
+echo "Hasil Lebih Kecil atau Sama: $hasilLebihKecilSama <br>";
+echo "Hasil Lebih Besar atau Sama: $hasilLebihBesarSama <br>";
+
+?>
