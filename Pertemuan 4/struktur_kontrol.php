@@ -56,4 +56,19 @@ foreach($nilaiSiswa as $nilai){
     }
 }
 
+//soal cerita no 21-22
+$nilaiUjian = [85,92,78,64,90,75,88,79,70,96];
+rsort($nilaiUjian);
+$skorTotal = 0;
+
+//menghapus nilai tertinggi dan terendah
+array_splice($nilaiUjian, 0, 2); //menghapus 2 elemen pertama
+array_splice($nilaiUjian, -2, 2); //menghapus 2 elemen terakhir
+
+foreach($nilaiUjian as $skor){
+    $skorTotal += $skor;
+}
+
+echo "<br> Skor Total: $skorTotal";
+
 ?>
