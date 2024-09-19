@@ -71,4 +71,23 @@ foreach($nilaiUjian as $skor){
 
 echo "<br> Skor Total: $skorTotal";
 
+//soal cerita no 23-24
+$hargaProduk = 120000;
+
+if($hargaProduk > 100000){
+    $diskon = $hargaProduk * 0.2;
+}
+
+echo "<br><br>Harga setelah diskon: Rp " . ($hargaProduk - $diskon);
+
+//soal cerita no 25-26
+$skorGameTotal = 420;
+
+echo "<br><br> Total skor pemain adalah: $skorGameTotal";
+if($skorGameTotal > 500){
+    echo"<br> Apakah pemain mendapatkan hadiah tambahan? YA";
+}else{
+    echo"<br> Apakah pemain mendapatkan hadiah tambahan? TIDAK";
+}
+
 ?>
