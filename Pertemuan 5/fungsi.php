@@ -1,6 +1,6 @@
 <?php
 //membuat fungsi
-function perkenalan($name, $salam) {
+function perkenalan($name, $salam="Assalamualaikum") {
     echo $salam.", ";
     echo"Perkenalkan, nama saya ".$name." <br/>";
     echo"Senang berkenalan dengan anda <br/>";
@@ -14,6 +14,7 @@ echo"<hr>";
 $saya = "Zidan";
 $ucapanSalam = "selamat pagi";
 
-perkenalan($saya, $ucapanSalam);
+//memanggil tanpa mengisi parameter salam
+perkenalan($saya);
 
 ?>
