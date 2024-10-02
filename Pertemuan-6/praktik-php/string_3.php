@@ -1,4 +1,4 @@
 <?php
 
-$pesan = "Saya Arek Malang";
+$pesan = "Saya arek malang";
 echo strrev($pesan) . "<br>";
