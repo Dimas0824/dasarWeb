@@ -35,3 +35,23 @@ if (preg_match($pattern, $text, $matches)) {
 } else {
     echo 'Tidak ada yang cocok';
 }
+
+//tambahan kode 17
+$pattern = '/go?d/'; //cocokan "god", "gd"
+$text = 'god is good';
+
+if (preg_match($pattern, $text, $matches)) {
+    echo 'Cocokkan: ' . $matches[0] . '<br><br>';
+} else {
+    echo 'Tidak ada yang cocok';
+}
+
+//tambahan kode 18
+$pattern = '/g(o{1,2}d)/'; // Cocokkan "god" dan "good"
+$text = 'god is good';
+
+if (preg_match($pattern, $text, $matches)) {
+    echo 'Cocokkan: ' . $matches[0] . '<br><br>';
+} else {
+    echo 'Tidak ada yang cocok';
+}
