@@ -21,7 +21,17 @@ if (preg_match($pattern, $text, $matches)) {
 //tambahan kode 9-12
 $pattern = '/apple/';
 $replacement = 'banana';
-$text = 'I Like apple pie';
+$text = 'I Like apple pie <br><br>';
 $new_text = preg_replace($pattern, $replacement, $text);
 
 echo $new_text; // output: I Like banana piee
+
+//tambahan kode 13-16
+$pattern = '/go*d/'; //cocokan "god", "good", "gooood", dll
+$text = 'god is good';
+
+if (preg_match($pattern, $text, $matches)) {
+    echo 'Cocokkan: ' . $matches[0] . '<br><br>';
+} else {
+    echo 'Tidak ada yang cocok';
+}
