@@ -1,8 +1,8 @@
 $(document).ready(function () {
     $("#upload-form").submit(function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Mencegah form dikirim secara normal
 
-        var formData = new FormData(this);
+        var formData = new FormData(this); // Mengumpulkan data form, termasuk file
 
         $.ajax({
             type: 'POST',
@@ -12,7 +12,7 @@ $(document).ready(function () {
             contentType: false,
             processData: false,
             success: function (response) {
-                $('#status').html(response);
+                $('#status').html(response); // Tampilkan respons dari server
             },
             error: function () {
                 $('#status').html('Terjadi kesalahan saat mengunggah file.');
