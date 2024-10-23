@@ -40,7 +40,6 @@ $user = $_SESSION['users'][$username];
         <h3>Statistik Pengguna</h3>
         <ul>
             <li>Total Pengguna: <?php echo count($_SESSION['users']); ?></li>
-            <li>Pengguna Aktif: <?php echo count(array_filter($_SESSION['users'], fn($user) => $user['status'] === 'active')); ?></li>
         </ul>
 
         <h3>Daftar Pengguna</h3>
