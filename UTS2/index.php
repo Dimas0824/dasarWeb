@@ -18,6 +18,7 @@ $user = $_SESSION['users'][$username];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Utama</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -100,6 +101,26 @@ $user = $_SESSION['users'][$username];
             <li>Pembaruan sistem dijadwalkan pada 1 November 2024.</li>
         </ul>
     </div>
+
+    <!-- jQuery Script untuk animasi -->
+    <script>
+        $(document).ready(function() {
+            // Efek hover pada gambar profil
+            $('.profile-img').hover(function() {
+                $(this).css("transform", "scale(1.5)"); // Membesar saat di-hover
+            }, function() {
+                $(this).css("transform", "scale(1)"); // Kembali normal
+            });
+
+            // Tambahkan efek klik pada tombol hapus
+            $('.button-delete').click(function(event) {
+                var confirmed = confirm("Apakah Anda yakin ingin menghapus pengguna ini?");
+                if (!confirmed) {
+                    event.preventDefault(); // Batalkan penghapusan jika pengguna membatalkan
+                }
+            });
+        });
+    </script>
 
 </body>
 

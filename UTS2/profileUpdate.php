@@ -13,7 +13,7 @@ $users = $_SESSION['users'];
 
 // Cek apakah form sudah disubmit
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Validasi input
+    // Validasi input (Server-side validation)
     $name = htmlspecialchars(trim($_POST['name']));
     $phone = htmlspecialchars(trim($_POST['phone']));
     $nim = htmlspecialchars(trim($_POST['nim']));
