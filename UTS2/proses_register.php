@@ -11,12 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = htmlspecialchars(trim($_POST['phone']));
     $password = htmlspecialchars(trim($_POST['password']));
 
-    // check apakah username sudah ada
-    if (isset($_SESSION['users'][$username])) {
-        echo "<script>alert('Username sudah digunakan.'); window.location.href='register.php';</script>";
-        exit();
-    }
-
     // upload foto profil
     $profile_picture = 'image.jpg'; // profile default
     if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === UPLOAD_ERR_OK) {
