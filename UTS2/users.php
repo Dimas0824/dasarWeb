@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['users'])) {
   $_SESSION['users'] = [
     'Cakra' => [
@@ -10,6 +9,7 @@ if (!isset($_SESSION['users'])) {
       'email' => 'cakramaw@gmail.com',
       'password' => 'cakra123',
       'profile_picture' => 'image.jpg',
+      'status' => 'active',
     ],
     'Dimas' => [
       'name' => 'Irsyad Dimas',
@@ -18,6 +18,61 @@ if (!isset($_SESSION['users'])) {
       'email' => 'dimassmadapas@gmail.com',
       'password' => '12345',
       'profile_picture' => 'image.jpg',
+      'status' => 'active',
+    ],
+    'Andi' => [
+      'name' => 'Andi Suhendra',
+      'phone' => '08123456789',
+      'nim' => '2341720099',
+      'email' => 'andi.suhendra@gmail.com',
+      'password' => 'andi123',
+      'profile_picture' => 'image.jpg',
+      'status' => 'inactive',
+    ],
+    'Rina' => [
+      'name' => 'Rina Suryani',
+      'phone' => '08987654321',
+      'nim' => '2341720101',
+      'email' => 'rina.suryani@gmail.com',
+      'password' => 'rina123',
+      'profile_picture' => 'image.jpg',
+      'status' => 'suspended',
+    ],
+    'Budi' => [
+      'name' => 'Budi Santoso',
+      'phone' => '082134567890',
+      'nim' => '2341720111',
+      'email' => 'budi.santoso@gmail.com',
+      'password' => 'budi123',
+      'profile_picture' => 'image.jpg',
+      'status' => 'active',
+    ],
+    'Siti' => [
+      'name' => 'Siti Aminah',
+      'phone' => '083123456789',
+      'nim' => '2341720122',
+      'email' => 'siti.aminah@gmail.com',
+      'password' => 'siti123',
+      'profile_picture' => 'image.jpg',
+      'status' => 'nonactive',
+    ],
+    'Rudi' => [
+      'name' => 'Rudi Hartono',
+      'phone' => '084123456789',
+      'nim' => '2341720133',
+      'email' => 'rudi.hartono@gmail.com',
+      'password' => 'rudi123',
+      'profile_picture' => 'image.jpg',
+      'status' => 'pending',
+    ],
+    'Ayu' => [
+      'name' => 'Ayu Lestari',
+      'phone' => '085123456789',
+      'nim' => '2341720144',
+      'email' => 'ayu.lestari@gmail.com',
+      'password' => 'ayu123',
+      'profile_picture' => 'image.jpg',
+      'status' => 'active',
     ],
   ];
 }
