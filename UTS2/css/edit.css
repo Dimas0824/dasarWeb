@@ -22,16 +22,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 /* Profile box styling */
 .profile-box {
-  background-color: #1f1f1f; /* Darker background for form */
-  padding: 40px;
+  background-color: #1f1f1f;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .profile-box h2 {
@@ -106,8 +107,8 @@ body {
 }
 
 .status {
-  color: #ffbe00;
+  color: #000000;
   text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
+  font-size: 15px;
+  margin-bottom: 10px;
 }

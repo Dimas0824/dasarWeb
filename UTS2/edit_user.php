@@ -53,13 +53,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="phone">Nomor Telepon:</label>
                 <input type="text" name="phone" value="<?php echo htmlspecialchars($user['phone']); ?>" disabled>
 
-                <label for="status">Status Pengguna:</label>
-                <select name="status" id="status" class="status" required>
-                    <option value="aktif" <?php echo ($user['status'] === 'aktif') ? 'selected' : ''; ?>>Aktif</option>
-                    <option value="nonaktif" <?php echo ($user['status'] === 'inactive') ? 'selected' : ''; ?>>Nonaktif</option>
-                    <option value="suspended" <?php echo ($user['status'] === 'suspended') ? 'selected' : ''; ?>>suspended</option>
-                    <option value="pending" <?php echo ($user['status'] === 'pending') ? 'selected' : ''; ?>>pending</option>
-                </select>
+                <div class="status">
+                    <label for="status">Status Pengguna:</label>
+                    <select name="status" id="status" class="status" required>
+                        <option value="aktif" <?php echo ($user['status'] === 'aktif') ? 'selected' : ''; ?>>Aktif</option>
+                        <option value="nonaktif" <?php echo ($user['status'] === 'inactive') ? 'selected' : ''; ?>>Nonaktif</option>
+                        <option value="suspended" <?php echo ($user['status'] === 'suspended') ? 'selected' : ''; ?>>suspended</option>
+                        <option value="pending" <?php echo ($user['status'] === 'pending') ? 'selected' : ''; ?>>pending</option>
+                    </select>
+                </div>
 
                 <button type="submit">Simpan Perubahan</button>
             </form>
