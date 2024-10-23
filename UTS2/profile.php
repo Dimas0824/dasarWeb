@@ -29,7 +29,8 @@ $user = $_SESSION['users'][$username];
             <form action="profileUpdate.php" method="POST" enctype="multipart/form-data">
                 <!-- Menampilkan gambar profil sebelum diupdate -->
                 <div class="profile-picture-container">
-                    <img src="uploads/<?php echo isset($user['profile_picture']) ? $user['profile_picture'] : 'default.jpg'; ?>" alt="Profile Picture" class="profile-img">
+                    <img src="uploads/<?php echo isset($user['profile_picture']) ? $user['profile_picture'] : 'default.jpg'; ?>"
+                        alt="Profile Picture" class="profile-img">
                 </div>
                 <label for="profile_picture">Profile Picture:</label>
                 <input type="file" name="profile_picture" id="profile_picture">

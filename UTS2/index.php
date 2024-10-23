@@ -25,7 +25,8 @@ $user = $_SESSION['users'][$username];
     <div class="navbar">
         <a class="home" href="index.php">Home</a>
         <div class="navbar-right">
-            <img src="uploads/<?php echo isset($user['profile_picture']) ? $user['profile_picture'] : 'default.jpg'; ?>" alt="Profile Picture" class="profile-img">
+            <img src="uploads/<?php echo isset($user['profile_picture']) ? $user['profile_picture'] : 'default.jpg'; ?>"
+                alt="Profile Picture" class="profile-img">
             <span class="username"><?php echo isset($user['name']) ? $user['name'] : ''; ?></span>
             <a href="profile.php">Edit Profil</a>
             <a href="logout.php">Logout</a>

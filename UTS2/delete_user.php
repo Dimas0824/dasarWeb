@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-// Cek apakah pengguna sudah login
-if (!isset($_SESSION['loggedin'])) {
-    header("Location: login.php");
-    exit();
-}
-
 // Cek apakah username telah diberikan dan pengguna tersebut ada di dalam session
 if (!isset($_GET['username']) || !isset($_SESSION['users'][$_GET['username']])) {
     header("Location: index.php");

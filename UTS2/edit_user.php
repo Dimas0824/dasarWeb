@@ -42,7 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="profile-box">
             <h2>Edit Status Pengguna</h2>
             <form action="" method="POST">
-                <img src="uploads/<?php echo isset($user['profile_picture']) ? $user['profile_picture'] : 'default.jpg'; ?>" alt="Profile Picture" class="profile-img">
+                <img src="uploads/<?php echo isset($user['profile_picture']) ? $user['profile_picture'] : 'default.jpg'; ?>"
+                    alt="Profile Picture" class="profile-img">
 
                 <label for="name">Nama Lengkap:</label>
                 <input type="text" name="name" value="<?php echo htmlspecialchars($user['name']); ?>" disabled>

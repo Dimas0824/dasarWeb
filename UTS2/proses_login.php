@@ -3,7 +3,7 @@ session_start();
 include('users.php'); // masukkan data user
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $email = trim($_POST['email']);
     $password = htmlspecialchars(trim($_POST['password']));
 
     // cari user berdasarkan email
