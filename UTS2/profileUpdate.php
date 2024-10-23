@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!empty($name) && !empty($phone) && !empty($nim)) {
         // Proses Upload Foto Profil
-        $profile_picture = $_SESSION['profile_picture'] ?? ''; // Ambil gambar lama
+        $profile_picture = $_SESSION['users'][$username]['profile_picture'] ?? ''; // Ambil gambar lama
         if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === UPLOAD_ERR_OK) {
             $uploads_dir = 'uploads/';
             if (!is_dir($uploads_dir)) mkdir($uploads_dir, 0777, true);
@@ -37,16 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'profile_picture' => $profile_picture
         ];
 
-        // Tulis kembali perubahan ke file users.php menggunakan fwrite
-        $file = fopen('users.php', 'w');
-        if ($file) {
-            fwrite($file, "<?php return " . var_export($_SESSION['users'], true) . ";\n");
-            fclose($file);
-        } else {
-            echo "<script>alert('Gagal membuka file untuk menyimpan perubahan.');</script>";
-        }
-
-        // Kembali ke halaman index setelah update profile
+        // Kembali ke halaman index setelah update
         header("Location: index.php");
         exit();
     } else {

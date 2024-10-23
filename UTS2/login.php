@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
         <div class="login-box">
             <h2>Login</h2>
             <form action="proses_login.php" method="POST">
-                <label for="email">Alamat email</label></label>
+                <label for="email">Alamat email</label>
                 <input type="email" name="email" placeholder="Masukkan email" required>
 
                 <label for="password">Password</label>

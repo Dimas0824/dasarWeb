@@ -5,13 +5,13 @@ if (!isset($_SESSION['loggedin'])) {
     exit();
 }
 
-$users = include('users.php');
+include('users.php'); // masukkan data user
 $username = $_SESSION['username'];
-$user = $users[$username];
+$user = $_SESSION['users'][$username];
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
