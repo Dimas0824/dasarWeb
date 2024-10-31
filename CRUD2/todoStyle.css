@@ -1,0 +1,193 @@
+/* Gaya Global */
+body {
+  font-family: Arial, sans-serif; /* Mengatur font keseluruhan */
+  background-color: #262626; /* Warna latar belakang gelap */
+  color: #fff; /* Warna teks putih */
+  margin: 0;
+  padding: 0;
+}
+
+/* Gaya untuk Judul */
+h2 {
+  color: #fff; /* Warna judul putih */
+  text-align: center; /* Pusatkan judul */
+  margin-top: 20px; /* Margin atas */
+}
+
+/* Gaya Navbar */
+.navbar {
+  background-color: #333; /* Warna latar belakang navbar */
+  position: fixed; /* Navbar tetap di atas */
+  top: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Bayangan navbar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000; /* Mengatur agar navbar berada di atas elemen lain */
+}
+
+/* Logo Navbar */
+.nav-logo {
+  font-size: 1.5em;
+  color: #f2f2f2; /* Warna logo */
+  text-decoration: none;
+  margin: 25px;
+}
+
+/* Navbar - Sisi Kanan */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Tombol Tambah Tugas */
+.button-add-task {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Warna hijau */
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+  margin: 50px;
+}
+
+/* Hover pada Tombol Tambah */
+.button-add-task:hover {
+  background-color: #45a049; /* Warna hijau lebih gelap */
+}
+
+/* Gaya Umum Tombol */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+/* Tombol Kembali */
+button.back-button {
+  background-color: #007bff; /* Warna biru */
+}
+
+button.back-button:hover {
+  background-color: #0069d9; /* Warna biru lebih gelap */
+}
+
+/* Tombol Kirim */
+button.submit {
+  background-color: #4caf50; /* Warna hijau */
+}
+
+button.submit:hover {
+  background-color: #45a049; /* Warna hijau lebih gelap */
+}
+
+/* Pengaturan Layout Kontainer */
+.container {
+  margin-top: 150px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Kontainer Tugas */
+.task-container {
+  display: grid; /* Menggunakan grid untuk mengatur tata letak */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 2fr)
+  ); /* Maksimal 4 kolom per baris */
+  gap: 40px; /* Menambah jarak antar kartu */
+  padding: 0 20px; /* Menambah padding kanan dan kiri untuk mengatur jarak dengan tepi halaman */
+  margin-top: 80px;
+}
+
+/* Kartu Tugas */
+.task-card {
+  background-color: #333; /* Warna latar belakang kartu */
+  color: #fff; /* Warna teks putih */
+  padding: 20px;
+  width: 100%; /* Pastikan kartu menggunakan 100% lebar kolom */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan kartu */
+  transition: transform 0.2s;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+/* Hover pada Kartu Tugas */
+.task-card:hover {
+  transform: scale(1.05); /* Efek memperbesar saat hover */
+}
+
+/* Judul Kartu */
+.task-card h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Deskripsi Kartu */
+.task-card p {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Gaya Kartu Berdasarkan Status */
+.belum-selesai {
+  border-left: 5px solid #dc3545; /* Warna merah untuk status 'Belum Selesai' */
+}
+
+.on-progress {
+  border-left: 5px solid #ffc107; /* Warna kuning untuk status 'On Progress' */
+}
+
+.selesai {
+  border-left: 5px solid #28a745; /* Warna hijau untuk status 'Selesai' */
+}
+
+/* Bagian Aksi Kartu Tugas */
+.actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Tombol Aksi pada Kartu */
+.actions a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+/* Tombol Edit */
+.actions .edit {
+  background-color: #ffc107; /* Warna kuning untuk edit */
+}
+
+.actions .edit:hover {
+  background-color: #e0a800; /* Warna kuning lebih gelap saat hover */
+}
+
+/* Tombol Hapus */
+.actions .delete {
+  background-color: #dc3545; /* Warna merah untuk hapus */
+}
+
+.actions .delete:hover {
+  background-color: #c82333; /* Warna merah lebih gelap saat hover */
+}
