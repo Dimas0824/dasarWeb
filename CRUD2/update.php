@@ -1,18 +1,19 @@
 <?php
-include 'updateTask.php';
+require_once 'updateTask.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Tugas</title>
 </head>
 
 <body>
     <h2>Edit Tugas</h2>
     <?php if ($task): ?>
-        <form action="updateTask.php" method="post">
+        <form action="updateTask.php?id=<?= $task['id'] ?>" method="post">
             <input type="hidden" name="id" value="<?= $task['id'] ?>">
 
             <label for="judul">Judul Tugas:</label>
@@ -32,7 +33,7 @@ include 'updateTask.php';
             <input type="date" id="due_date" name="due_date" value="<?= htmlspecialchars($task['due_date']) ?>" required>
 
             <button type="submit">Update Tugas</button>
-            <button><a href="todoApps.php">Kembali</a></button>
+            <button><a href="todoApps.php" style="color: inherit; text-decoration: none;">Kembali</a></button>
         </form>
     <?php else: ?>
         <p>Data tugas tidak ditemukan.</p>
