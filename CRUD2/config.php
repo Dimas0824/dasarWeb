@@ -1,14 +1,12 @@
 <?php
 $servername = "LAPTOP-VMVSF6A7\\MSSQLSERVER2";
-$connectionOptions = array(
-    "Database" => "CRUD",
-);
+$database = "CRUD";
+$username = "";
+$password = "";
 
-// Membuat koneksi ke SQL Server
-$conn = sqlsrv_connect($servername, $connectionOptions);
-
-// Memeriksa apakah koneksi berhasil
-if ($conn === false) {
-    die("Connection failed: " . print_r(sqlsrv_errors(), true));
-} else {
+try {
+    $conn = new PDO("sqlsrv:Server=$servername;Database=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }

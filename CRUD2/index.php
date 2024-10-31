@@ -3,11 +3,11 @@ require_once("config.php");
 
 // Query untuk mengambil data sepatu
 $sql = "SELECT * FROM sepatu";
-$stmt = sqlsrv_query($conn, $sql);
+$stmt = $conn->query($sql);
 
 // Memeriksa apakah query berhasil
 if ($stmt === false) {
-    die("Query failed: " . print_r(sqlsrv_errors(), true));
+    die("Query failed: " . print_r($conn->errorInfo(), true));
 }
 ?>
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ if ($stmt === false) {
             </tr>
         </thead>
         <tbody>
-            <?php while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)): ?>
+            <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['merk']; ?></td>
@@ -45,9 +45,9 @@ if ($stmt === false) {
         </tbody>
     </table>
     <?php
-    // Menutup koneksi
-    sqlsrv_free_stmt($stmt);
-    sqlsrv_close($conn);
+    // Menutup koneksi dengan mengatur $stmt dan $conn ke null
+    $stmt = null;
+    $conn = null;
     ?>
 </body>
 
