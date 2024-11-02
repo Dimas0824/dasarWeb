@@ -1,6 +1,6 @@
 <?php
 // Menyertakan konfigurasi database
-require 'config2.php';
+require_once 'config2.php';
 
 // Mendefinisikan variabel $task untuk data tugas
 $task = null;
@@ -9,9 +9,8 @@ $task = null;
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     // Mengambil data tugas berdasarkan ID dari database
-    $stmt = $conn->prepare("SELECT * FROM tasks WHERE id = :id");
-    $stmt->bindParam(':id', $id);
-    $stmt->execute();
+    $stmt = $conn->prepare("SELECT * FROM tasks WHERE id = ?");
+    $stmt->execute([$id]);
     $task = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
@@ -30,15 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $due_date = $_POST['due_date'];
 
     // Proses update data tugas ke database
-    $stmt = $conn->prepare("UPDATE tasks SET judul = :judul, task = :task, status = :status, due_date = :due_date WHERE id = :id");
-    $stmt->bindParam(':judul', $judul);
-    $stmt->bindParam(':task', $taskDescription);
-    $stmt->bindParam(':status', $status);
-    $stmt->bindParam(':due_date', $due_date);
-    $stmt->bindParam(':id', $id);
+    $stmt = $conn->prepare("UPDATE tasks SET judul = ?, task = ?, status = ?, due_date = ? WHERE id = ?");
 
-    // Mengeksekusi query update
-    if ($stmt->execute()) {
+    // Mengeksekusi query update dengan parameter sebagai array
+    if ($stmt->execute([$judul, $taskDescription, $status, $due_date, $id])) {
         header("Location: todoApps.php");
         exit;
     } else {
