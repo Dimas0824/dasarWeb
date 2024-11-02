@@ -34,6 +34,7 @@ $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
                     <div class="task-card belum-selesai">
                         <h3><?= htmlspecialchars($task['judul']) ?></h3>
                         <p><?= htmlspecialchars($task['task']) ?></p>
+                        <p>DeadLine: <?= htmlspecialchars($task['due_date']) ?></p>
                         <p><strong>Status:</strong> <?= htmlspecialchars($task['status']) ?></p>
                         <div class="actions">
                             <a href="update.php?id=<?= $task['id'] ?>" class="edit">Edit</a>
@@ -52,6 +53,7 @@ $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
                     <div class="task-card on-progress">
                         <h3><?= htmlspecialchars($task['judul']) ?></h3>
                         <p><?= htmlspecialchars($task['task']) ?></p>
+                        <p>DeadLine: <?= htmlspecialchars($task['due_date']) ?></p>
                         <p><strong>Status:</strong> <?= htmlspecialchars($task['status']) ?></p>
                         <div class="actions">
                             <a href="update.php?id=<?= $task['id'] ?>" class="edit">Edit</a>
@@ -70,6 +72,7 @@ $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
                     <div class="task-card selesai">
                         <h3><?= htmlspecialchars($task['judul']) ?></h3>
                         <p><?= htmlspecialchars($task['task']) ?></p>
+                        <p>DeadLine: <?= htmlspecialchars($task['due_date']) ?></p>
                         <p><strong>Status:</strong> <?= htmlspecialchars($task['status']) ?></p>
                         <div class="actions">
                             <a href="update.php?id=<?= $task['id'] ?>" class="edit">Edit</a>
