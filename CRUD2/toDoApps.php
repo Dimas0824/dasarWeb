@@ -1,9 +1,14 @@
 <?php
+// Mengimpor konfigurasi koneksi database dari file 'config2.php'.
 require 'config2.php';
 
+// Menjalankan query SQL untuk mengambil semua data dari tabel 'tasks'.
 $query = $conn->query("SELECT * FROM tasks");
+
+// Mengambil semua hasil query dalam bentuk array asosiatif untuk digunakan dalam tampilan.
 $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">
@@ -12,12 +17,13 @@ $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do App</title>
+    <!-- Memuat stylesheet untuk styling halaman -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/todoStyle.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Navbar dengan logo aplikasi dan tombol tambah tugas -->
     <div class="navbar">
         <a href="todoApps.php" class="nav-logo">To-Do App</a>
         <div class="navbar-right">
@@ -26,11 +32,12 @@ $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <div class="container">
-        <!-- Section untuk tugas yang Belum Selesai -->
+        <!-- Section untuk menampilkan tugas yang Belum Selesai -->
         <h2>Belum Selesai</h2>
         <div class="task-container">
             <?php foreach ($tasks as $task): ?>
                 <?php if ($task['status'] == 'Belum Selesai'): ?>
+                    <!-- Kartu tugas yang menunjukkan judul, deskripsi, deadline, dan status -->
                     <div class="task-card belum-selesai">
                         <h3><?= htmlspecialchars($task['judul']) ?></h3>
                         <p><?= htmlspecialchars($task['task']) ?></p>
