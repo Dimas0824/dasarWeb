@@ -16,7 +16,7 @@ require_once 'updateTask.php';
 </head>
 
 <body>
-    <!-- Navbar dengan logo aplikasi dan tombol untuk menambah tugas -->
+    <!-- Navbar dengan nama dan tombol untuk menambah tugas -->
     <div class="navbar">
         <a href="todoApps.php" class="nav-logo">To-Do App</a>
         <div class="navbar-right">
@@ -37,23 +37,29 @@ require_once 'updateTask.php';
 
                 <!-- Input untuk judul tugas, dengan nilai default dari data tugas -->
                 <label for="judul">Judul Tugas:</label>
-                <input type="text" id="judul" name="judul" value="<?= htmlspecialchars($task['judul']) ?>" required>
+                <input type="text" id="judul" name="judul" value="
+                <?= htmlspecialchars($task['judul']) ?>" required>
 
                 <!-- Textarea untuk deskripsi tugas, dengan nilai default dari data tugas -->
                 <label for="task">Deskripsi:</label>
-                <textarea id="task" name="task" required><?= htmlspecialchars($task['task']) ?></textarea>
+                <textarea id="task" name="task" required>
+                    <?= htmlspecialchars($task['task']) ?></textarea>
 
                 <!-- Dropdown untuk memilih status tugas, dengan status saat ini terpilih secara otomatis -->
                 <label for="status">Status:</label>
                 <select id="status" name="status">
-                    <option value="Belum Selesai" <?= $task['status'] == 'Belum Selesai' ? 'selected' : '' ?>>Belum Selesai</option>
-                    <option value="On Progress" <?= $task['status'] == 'On Progress' ? 'selected' : '' ?>>On Progress</option>
-                    <option value="Selesai" <?= $task['status'] == 'Selesai' ? 'selected' : '' ?>>Selesai</option>
+                    <option value="Belum Selesai" <?= $task['status'] == 
+                    'Belum Selesai' ? 'selected' : '' ?>>Belum Selesai</option>
+                    <option value="On Progress" <?= $task['status'] == 
+                    'On Progress' ? 'selected' : '' ?>>On Progress</option>
+                    <option value="Selesai" <?= $task['status'] == 
+                    'Selesai' ? 'selected' : '' ?>>Selesai</option>
                 </select>
 
                 <!-- Input untuk tanggal selesai tugas, dengan nilai default dari data tugas -->
                 <label for="due_date">Tanggal Selesai:</label>
-                <input type="date" id="due_date" name="due_date" value="<?= htmlspecialchars($task['due_date']) ?>" required>
+                <input type="date" id="due_date" name="due_date" value="
+                <?= htmlspecialchars($task['due_date']) ?>" required>
 
                 <!-- Tombol untuk mengirim data update ke server -->
                 <button type="submit" class="submit">Update Tugas</button>

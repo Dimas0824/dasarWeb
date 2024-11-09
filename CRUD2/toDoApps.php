@@ -23,7 +23,7 @@ $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <!-- Navbar dengan logo aplikasi dan tombol tambah tugas -->
+    <!-- Navbar dengan nama dan tombol tambah tugas -->
     <div class="navbar">
         <a href="todoApps.php" class="nav-logo">To-Do App</a>
         <div class="navbar-right">
@@ -45,7 +45,8 @@ $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
                         <p><strong>Status:</strong> <?= htmlspecialchars($task['status']) ?></p>
                         <div class="actions">
                             <a href="update.php?id=<?= $task['id'] ?>" class="edit">Edit</a>
-                            <a href="deleteTask.php?id=<?= $task['id'] ?>" class="delete" onclick="return confirm('Apakah Anda yakin ingin menghapus tugas ini?')">Delete</a>
+                            <a href="deleteTask.php?id=<?= $task['id'] ?>" class="delete" onclick="return 
+                            confirm('Apakah Anda yakin ingin menghapus tugas ini?')">Delete</a>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -64,7 +65,8 @@ $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
                         <p><strong>Status:</strong> <?= htmlspecialchars($task['status']) ?></p>
                         <div class="actions">
                             <a href="update.php?id=<?= $task['id'] ?>" class="edit">Edit</a>
-                            <a href="deleteTask.php?id=<?= $task['id'] ?>" class="delete" onclick="return confirm('Apakah Anda yakin ingin menghapus tugas ini?')">Delete</a>
+                            <a href="deleteTask.php?id=<?= $task['id'] ?>" class="delete" onclick="return 
+                            confirm('Apakah Anda yakin ingin menghapus tugas ini?')">Delete</a>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -83,7 +85,8 @@ $tasks = $query->fetchAll(PDO::FETCH_ASSOC);
                         <p><strong>Status:</strong> <?= htmlspecialchars($task['status']) ?></p>
                         <div class="actions">
                             <a href="update.php?id=<?= $task['id'] ?>" class="edit">Edit</a>
-                            <a href="deleteTask.php?id=<?= $task['id'] ?>" class="delete" onclick="return confirm('Apakah Anda yakin ingin menghapus tugas ini?')">Delete</a>
+                            <a href="deleteTask.php?id=<?= $task['id'] ?>" class="delete" onclick="return 
+                            confirm('Apakah Anda yakin ingin menghapus tugas ini?')">Delete</a>
                         </div>
                     </div>
                 <?php endif; ?>
